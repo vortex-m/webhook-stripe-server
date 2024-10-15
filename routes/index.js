@@ -35,7 +35,8 @@ exports.webhookHandler = function (config) {
 		}
 		catch(ignored) { } 
 		
-		if(!(api_call instanceof Function))
+		
+		if(!(api_call instanceof  Function))
 		{
 			debug('unsupported webhoook', api_data.type, api_data.id);
 			setTimeout(function () {
