@@ -1,4 +1,4 @@
-# stripe-webhook-server
+# webhook-stripe-server
 
 This is a standalone scaffold or middleware for responding to [Stripe webhooks](https://stripe.com/docs/webhooks). 
 
@@ -14,8 +14,8 @@ There is no user interface. [Postman REST Client](https://chrome.google.com/webs
 
 ## Usage - Standalone service
 
-	$  git clone https://github.com/ruffrey/stripe-webhook-server
-	$  cd stripe-webhook-server
+	$  git clone https://github.com/vortex-m/webhook-stripe-server
+	$  cd webhook-stripe-server
 	$  npm install
 
 (or, fork it, then clone your own)
@@ -29,7 +29,7 @@ to run the server.
 
 ## Usage - Connect or Express middleware
 
-	$  npm install stripe-webhook-server
+	$  npm install webhook-stripe-server
 
 Then bind the middleware to a route. You must pass some configuration options.
 
@@ -91,17 +91,6 @@ If you don't want to respond to a webhook, leave the function empty, or just del
 
 If you have custom application logic, you would edit `lib/webhooks.js`. This project is really more of a scaffold than a module, in that respect.
 
-
-## Modules
-
-- [Express 3](http://expressjs.com)
-- [Nodemailer](https://github.com/andris9/Nodemailer) for sending email.
-	- The `config.nodemailer` options are passed directly to the Nodemailer module.
-- [Handlebars](http://handlebarsjs.com) for email templates
-
-## Shameless plug
-
-Check out [Paastor](https://paastor.com) for painless Node.js deployments - to your own server. For example, you can have stripe-webhook-server deployed in a few minutes using Paastor.
 
 ## Bugs
 
